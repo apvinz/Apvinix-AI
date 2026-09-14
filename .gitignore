@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+
+# Data (never commit user audio or generated scores)
+data/uploads/*
+data/processing/*
+data/outputs/*
+!data/uploads/.gitkeep
+!data/processing/.gitkeep
+!data/outputs/.gitkeep
+
+# Env
+.env
+*.local
+
+# OS
+.DS_Store
+Thumbs.db

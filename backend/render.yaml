@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: transcore-ai-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    envVars:
+      # After the frontend is live on Netlify, set this to its URL here in
+      # the Render dashboard (Environment tab) — comma-separate multiple
+      # origins if you have a custom domain too.
+      - key: TRANSCORE_CORS_ORIGINS
+        value: ""
+      - key: TRANSCORE_MAX_FILE_SIZE_MB
+        value: "100"
+      - key: TRANSCORE_MAX_DURATION_MIN
+        value: "20"
